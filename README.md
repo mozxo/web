@@ -13,6 +13,11 @@
 
 <p align='center'>
 
-[![Try on repl.it](https://repl-badge.jajoosam.repl.co/try.png)]([https://repl.it/@glench/Python-Play-sample-game](https://replit.com/@Yoxmo/Live-Web-Server#app.py))
+<a href="https://replit.com/@Yoxmo/Live-Web-Server">
+
+<img src="https://repl-badge.jajoosam.repl.co/try.png">
+
+<a>
+
 
 <p>
