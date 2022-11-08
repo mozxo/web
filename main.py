@@ -3,18 +3,18 @@ from bs4 import BeautifulSoup
 
 name = input('[?] Enter name: ')
 
-if len(glob.glob(f"C4C-{name}-LS/*")) <= 1:
-  os.system(f'git clone https://github.com/{name}/C4C-{name}-LS.git')
+if len(glob.glob(f"web/*")) <= 1:
+  os.system(f'git clone https://github.com/{name}/VSCode-Browser-Webserver.git')
 else:
   pass
 
 def addroutes():
-  files = glob.glob(f"C4C-{name}-LS/*")
+  files = glob.glob(f"web/*")
   first = f"""import flask , os
 from flask import Flask, render_template , redirect , request
 
-template_dir = os.path.abspath('C4C-{name}-LS')
-static_dir = os.path.abspath('C4C-{name}-LS/assets')
+template_dir = os.path.abspath('web')
+static_dir = os.path.abspath('web/assets')
 
 app = Flask(__name__, template_folder=template_dir , static_folder=static_dir)
 
@@ -29,7 +29,7 @@ def index():
   open('app.py', 'w+').write(first)
   
   for item in files:
-    if item == f"C4C-{name}-LS/index.html":
+    if item == f"web/index.html":
       pass
     else:
       if item.endswith('html'):
@@ -61,7 +61,7 @@ subprocess.Popen(('python3', 'app.py'))
 
 while True:
   
-  result = subprocess.check_output(f"cd C4C-{name}-LS && git pull", shell=True)
+  result = subprocess.check_output(f"cd web && git pull", shell=True)
   
   if str(result.decode()).strip('\n') != "Already up to date.":
     addroutes()
