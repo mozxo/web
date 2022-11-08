@@ -51,6 +51,6 @@
 
 ```
 
-Warning: Make sure to change github.com to github.dev on YOUR repo.
+Warning: You will need to fork this repo aswell as the repl.it
 
 ```
